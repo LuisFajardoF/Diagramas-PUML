@@ -1,0 +1,19 @@
+@startuml
+scale 640*480
+skinparam shadowing false
+
+#palegreen:<&file>**md file**;
+if (<&cog> md2tex) then
+    #palegreen:<&file> **latex file**;
+else
+    #pink:error;
+    kill
+endif
+if (<&cog> pdflatex) then
+    #palegreen:<&file> **pdf file**; 
+    kill
+else
+    #pink:error;
+    kill
+endif
+@enduml

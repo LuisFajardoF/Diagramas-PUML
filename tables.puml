@@ -1,0 +1,74 @@
+@startuml
+ 
+skinparam class {
+    BackgroundColor Beige
+    BorderColor DarkGray
+    ArrowColor DarkGray
+}
+
+class Table {
+    + Table(string& content, string& caption)
+    + string getCode()
+    # string getContent()
+    # string getAlign(string& row_align)
+    # vector<string> getFormatAlign(string& row_align) 
+    # string getHeader(string& header)
+    # string getRows()
+    # void fillRowsVector()
+    # string getBegin()
+    # string getCentering()
+    # string getCaption()
+    # string getEnd()
+    # vector<string> rows
+    - void setBegin()
+    - void setCentering()
+    - void setCaption(string& caption)
+    - void setEnd()
+    - string begin
+    - string centering
+    - string content
+    - string caption 
+    - string end
+    - string code
+}
+
+class TableStyle1 {
+    + TableStyle1(string& content, string& caption)
+    + string getCode()
+    # string getContent()
+    # string getAlign(string& row_align)
+    # string getRows()
+    - code
+}
+
+class TableStyle1Colored {
+    + TableStyle1Colored(string& content, string& caption, string& color)
+    + string getCode()
+    # string getContent()
+    # string getRows()
+    - color
+    - code
+}
+
+class TableStyle2 {
+    + TableStyle2(string& content, string& caption)
+    + string getCode()
+    # string getContent()
+    # string getRows()
+    - code
+}
+
+class TableStyle2Colored {
+    + TableStyle2Colored(string& content, string& caption, string& color)
+    + string getCode()
+    # string getContent()
+    # string getRows()
+    - color
+    - code
+}
+
+Table <|-[bold]- TableStyle1
+TableStyle1 <|-[bold]- TableStyle1Colored
+TableStyle1 <|-[bold]- TableStyle2
+TableStyle1Colored <|-[bold]- TableStyle2Colored
+@enduml

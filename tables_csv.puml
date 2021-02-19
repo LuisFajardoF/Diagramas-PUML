@@ -1,0 +1,64 @@
+@startuml
+
+skinparam class {
+    BackgroundColor Beige
+    BorderColor DarkGray
+    ArrowColor DarkGray
+}
+
+class TableCSV {
+    + TableCSV(string& content, string& caption)
+    + string getCode()
+    # string getContent()
+    # string getBegin()
+    # string getCentering()
+    # string getCaption()
+    # string getEnd()
+    - void setBegin()
+    - void setCentering()
+    - void setCaption(string& caption)
+    - void setEnd()
+    - string begin
+    - string centering
+    - string caption
+    - string end
+    - string code
+    # string content
+}
+
+class TableCSVStyle1 {
+    + TableCSVStyle1(string& content, string& caption)
+    + string getCode()
+    # string getContent()
+    - string code
+}
+
+class TableCSVStyle1Colored {
+    + TableCSVStyle1Colored(string& content, string& caption, string& color)
+    + string getCode()
+    # string getContent()
+    - string color
+    - string code
+}
+
+class TableCSVStyle2 {
+    + TableCSVStyle2(string& content, string& caption)
+    + string getCode()
+    # string getContent()
+    - string code
+}
+
+class TableCSVStyle2Colored {
+    + TableCSVStyle2Colored(string& content, string& caption, string& color)
+    + string getCode()
+    # string getContent()
+    - string color
+    - string code
+}
+
+TableCSV <|-[bold]- TableCSVStyle1
+TableCSVStyle1 <|-[bold]- TableCSVStyle1Colored
+TableCSVStyle1 <|-[bold]- TableCSVStyle2
+TableCSVStyle1Colored <|-[bold]- TableCSVStyle2Colored
+
+@enduml

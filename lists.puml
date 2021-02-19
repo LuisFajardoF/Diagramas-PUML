@@ -1,0 +1,80 @@
+@startuml
+abstract class List {
+    + List(string*& params, string& content)
+    + virtual string getCode()
+    # string getBegin()
+    # string getEnd()
+    # virtual string getContent()
+    # virtual string generateItems()
+    # virtual string getParamCode(string& param)
+    # string getParams()
+    # void fillItemsVector()
+    # string trim(string str)
+    # string* params
+    # string content
+    # vector<string> items
+    # string begin
+    # string end
+}
+
+class UnorderedList {
+    + UnorderedList(string*& params, string& content)
+    + string getCode()
+    - void setBegin(string params)
+    - void setEnd()
+    - string getContent()
+    - string generateItems()
+    - string getParamCode(string& param)
+}
+
+class OrderedList {
+    + OrderedList(string*& params, string& content)
+    + string getCode()
+    - void setBegin(string params)
+    - void setEnd()
+    - string getContent()
+    - string generateItems()
+    - string getParamCode(string& param)
+}
+
+class NestedList {
+    + NestedList(string*& params, string& content)
+    + string getCode()
+    - string getContent()
+    - string generateItems()
+    - string getParamCode(string& param)
+    - string getBegin(string env)
+    - string getEnd(string env)
+    - string getItem(string& item, int tab_arr_off)
+    - string getBeginEnvAndItems(int env_off, string& item, const string env)
+    - vector<int> tags
+    - bool active_envs[6]
+    - string tabs[7]
+}
+
+class DescriptionList {
+    + DescriptionList(string*& params, string& content)
+    + string getCode()
+    - void setBegin(string params)
+    - void setEnd()
+    - string getContent()
+    - string generateItems()
+    - string getParamCode(string& param)
+}
+
+class ToDoList {
+    + ToDoList(string*& params, string& content)
+    + string getCode()
+    - void setBegin()
+    - void setEnd()
+    - string getContent()
+    - string generateItems()
+    - string getParamCode(string& param)
+}
+
+List <|--- UnorderedList
+List <|-- OrderedList
+List <|--- NestedList
+List <|-- DescriptionList
+List <|--- ToDoList
+@enduml
