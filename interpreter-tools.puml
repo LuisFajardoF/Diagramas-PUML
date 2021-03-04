@@ -1,0 +1,17 @@
+' Tomado de página 97-98, diagrama de carriles
+' Guia de Referencia del lenguaje PlantUML
+
+@startuml
+|#AntiqueWhite| Análisis \n  Léxico |
+:   flex 
+ __v2.6.4__ ;
+kill
+|#AliceBlue|   Análisis\n Sintáctico |
+: bison
+ __v3.3.2__ ;
+kill
+|#AntiqueWhite| Representación \n   en memoria|
+: treecc 
+ __v0.3.11__;
+kill
+@enduml

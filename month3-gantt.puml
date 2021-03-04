@@ -1,0 +1,28 @@
+@startgantt
+scale 2
+
+2021-01-04 to 2021-01-31 is open
+title Actividades: Mes 3
+
+Project starts the 2021-01-04
+-- Semana 9 --
+[ ] starts 2021-01-04
+[ ] is colored in DarkSlateGray
+[ ] ends 2021-01-10
+
+-- Semana 10 --
+[  ] starts 2021-01-11
+[  ] is colored in DarkSlateGray
+[  ] ends 2021-01-17
+
+-- Semana 11 --
+[   ] starts 2021-01-18
+[   ] is colored in DarkSlateGray
+[   ] ends 2021-01-24
+
+-- Semana 12 --
+[    ] starts 2021-01-25
+[    ] is colored in DarkSlateGray
+[    ] ends 2021-01-31
+hide footbox
+@endgantt

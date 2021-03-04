@@ -1,0 +1,27 @@
+@startgantt
+scale 2
+2021-02-01 to 2021-02-28 is open
+title Actividades: Mes 4
+
+Project starts the 2021-02-01
+-- Semana 13 --
+[ ] starts 2021-02-01
+[ ] is colored in DarkSlateGray
+[ ] ends 2021-02-07
+
+-- Semana 14 --
+[  ] starts 2021-02-08
+[  ] is colored in DarkSlateGray
+[  ] ends 2021-02-14
+
+-- Semana 15 --
+[   ] starts 2021-02-15
+[   ] is colored in DarkSlateGray
+[   ] ends 2021-02-21
+
+-- Semana 16 --
+[    ] starts 2021-02-22
+[    ] is colored in DarkSlateGray
+[    ] ends 2021-02-28
+hide footbox
+@endgantt

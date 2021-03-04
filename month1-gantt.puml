@@ -1,0 +1,42 @@
+@startgantt
+scale 2
+hide footbox
+2020-10-19 to 2020-11-15 is open
+title Actividades: Mes 1
+
+Project starts the 2020-10-19
+-- Semana 1 --
+[ ] starts 2020-10-19
+[ ] is colored in DarkSlateGray
+2020-10-19 is colored in LightGray
+2020-10-24 is colored in LightGray
+[ ] ends 2020-10-25
+
+-- Semana 2 --
+[  ] starts 2020-10-26
+[  ] is colored in DarkSlateGray
+2020-10-26 is colored in LightGray
+2020-10-30 is colored in LightGray
+[  ] ends 2020-11-01
+
+-- Semana 3 --
+[   ] starts 2020-11-02
+[   ] is colored in DarkSlateGray
+2020-11-02 to 2020-11-03 are colored in LightGray
+2020-11-04 to 2020-11-08 are colored in LightSalmon
+[   ] ends 2020-11-08
+
+-- Semana 4 --
+[    ] starts 2020-11-09
+[    ] is colored in DarkSlateGray
+2020-11-09 is colored in LightGray
+[    ] ends 2020-11-15
+
+skinparam LegendBackgroundColor transparent 
+skinparam LegendBorderColor transparent
+legend right 
+|<back:LightSalmon>___</back>| Huracán |
+|<back:LightGray>___</back>| Días no trabajados |
+endlegend
+
+@endgantt

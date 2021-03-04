@@ -1,0 +1,11 @@
+@startuml
+' Tomado de página 97-98, diagrama de carriles
+' Guia de Referencia del lenguaje PlantUML
+
+|#AntiqueWhite| Análisis \n  Léxico |
+: lexer ;
+|#AliceBlue|   Análisis\n Sintáctico |
+: parser ;
+|#AntiqueWhite| Representación \n   en memoria|
+: AST ;
+@enduml

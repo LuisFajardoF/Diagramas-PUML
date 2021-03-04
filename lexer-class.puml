@@ -1,0 +1,20 @@
+
+@startuml
+
+skinparam class {
+    BackgroundColor Beige
+    shadowing false
+}
+
+class Lexer {
+    + Lexer(istream& in)
+    + int getNextToken(semantic_type* yylval)
+    + string getText()
+    + int getLineNo()
+    - int _getNextToken(semantic_type& yylval, yyscan_t yyscanner)
+    - int makeToken(const char *txt, int len, int tk)
+    - istream &in
+    - string text
+    - yyscan_t scanner
+}
+@enduml
