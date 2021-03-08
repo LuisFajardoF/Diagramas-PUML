@@ -1,0 +1,12 @@
+@startuml
+    |#WhiteSmoke|Análisis léxico|
+        while ( text[offset] ) is (not EOF)
+            :**eval:** emphasis text;
+            :**eval:** special characters;
+        endwhile ( EOF )
+            :**retrun:** text; 
+    |#LightYellow|Análisis sintáctico|
+        :**new node:** PlainText(text);
+    |#WhiteSmoke|Generación de código|
+        :**gen latex:** Code::plainText(text);
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+class Package << (S,PaleGreen) >> {
+    + Package()
+    + ~Package()
+    + void add(unsigned int pack)
+    + string packsCode()
+    + unordered_map<unsigned int, string> packInfo
+    + vector<string> packs 
+}
+
+enum PACKS {
+    Graphicx
+    Subfigure
+    Setspace
+    Siunitx
+    Booktabs
+    Xcolor
+    Colortbl
+    Pgfplotstable
+    Enumitem
+    Amssymb
+    Pifont
+}
+
+Package *- PACKS : use
+@enduml
