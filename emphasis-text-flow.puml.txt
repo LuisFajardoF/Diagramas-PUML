@@ -1,0 +1,20 @@
+@startuml
+    !procedure $text_loop($arg1, $arg2)
+        while ( text[offset] ) is (not EOF)
+            :**eval:** emphasis text;
+            :**eval:** special characters;
+        endwhile ( EOF )
+            :**retrun:** $arg1;
+            :**retrun:** $arg2;
+            kill
+    !endprocedure
+
+    start
+    repeat
+        if (token **=** #) then (true)
+            $text_loop("Token::Text", "Token::Section")
+        elseif (token **=** ##) then (true)
+            $text_loop("Token::Text", "Token::SubSection")
+        endif
+            #palegreen:eval other rule;
+@enduml

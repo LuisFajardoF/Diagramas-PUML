@@ -1,0 +1,12 @@
+@startuml
+    while ( element_list ) is ( not end )
+        if ( element **=** ["Section" "Text"] ) then (true)
+            :**new node:** elements(Section("Text"));
+        elseif ( element **=** ["SubSection" "Text"] ) then (true)
+            :**new node:** elements(SubSection("Text"));
+        else (other)
+            #palegreen:eval other element;
+        endif
+    endwhile (end)
+    :**new node:** BlockElement(elements);
+@enduml

@@ -22,55 +22,55 @@
             ===
             md2tex
         "
-        (CompileTools) -[#DeepSkyBlue]> (Compiler)  
-        (Compiler) -[#DeepSkyBlue]> (Executable)  
+        (CompileTools) -[#DeepSkyBlue]--> (Compiler)  
+        (Compiler) -[#DeepSkyBlue]--> (Executable)  
     }
     
     rectangle "archivos de código generado" {
         (ast.h)
-        (ast.cpp) ..> (ast.h)
+        (ast.cpp) ....> (ast.h)
         (ast.cpp)
         (lexer.cpp)
-        (parser.h) ..> (ast.h)
-        (parser.cpp) ..> (parser.h)
+        (parser.h) ....> (ast.h)
+        (parser.cpp) ....> (parser.h)
     }
 
     rectangle "archivos de entrada de flex, bison y treecc" {
-        (lexer.l) -[#blue]-> (lexer.cpp)
-        (parser.y) -[#blue]-> (parser.h)
-        (parser.y) -[#blue]-> (parser.cpp)
-        (ast.tc) -[#blue]-> (ast.cpp)
-        (ast.tc) -[#blue]-> (ast.h)
-        (CompileTools) -[#green]> (lexer.l) : flex
-        (CompileTools) -[#green]> (parser.y) : bison
-        (CompileTools) -[#green]> (ast.tc) : treecc
+        (lexer.l) -[#blue]---> (lexer.cpp)
+        (parser.y) -[#blue]---> (parser.h)
+        (parser.y) -[#blue]---> (parser.cpp)
+        (ast.tc) -[#blue]---> (ast.cpp)
+        (ast.tc) -[#blue]---> (ast.h)
+        (CompileTools) --[#green]--> (lexer.l) : flex
+        (CompileTools) --[#green]--> (parser.y) : bison
+        (CompileTools) --[#green]--> (ast.tc) : treecc
     }
 
     rectangle "archivos de código fuente" {
-        (main.h) ..> (lexer.h)
-        (main.cpp) ..> (main.h)
-        (lexer.h) ..> (parser.h)
-        (parser.cpp) ..> (lexer.h)
-        (lexer.cpp) ..> (lexer.h)
-        (ast.cpp) ..> (gen_latex.h)
-        (gen_latex.cpp) ..> (gen_latex.h)
-        (gen_latex.h) ..> (gen_table.h)
-        (gen_latex.h) ..> (gen_list.h)
-        (gen_latex.h) ..> (gen_bib.h)
+        (main.h) ...> (lexer.h)
+        (main.cpp) ...> (main.h)
+        (lexer.h) ...> (parser.h)
+        (parser.cpp) ...> (lexer.h)
+        (lexer.cpp) ...> (lexer.h)
+        (ast.cpp) ...> (gen_latex.h)
+        (gen_latex.cpp) ...> (gen_latex.h)
+        (gen_latex.h) ...> (gen_table.h)
+        (gen_latex.h) ...> (gen_list.h)
+        (gen_latex.h) ...> (gen_bib.h)
         (gen_bib.cpp) ...> (gen_bib.h)
         (gen_bib.h)
-        (gen_list.cpp) ..> (gen_list.h)
+        (gen_list.cpp) ...> (gen_list.h)
         (gen_list.h)
-        (gen_table.cpp) ..> (gen_table.h)
+        (gen_table.cpp) ...> (gen_table.h)
         (gen_table.h)
-        (Compiler) -[#DarkOrange]-> (gen_bib.cpp) : g++
-        (Compiler) -[#DarkOrange]-> (gen_list.cpp) : g++
-        (Compiler) -[#DarkOrange]-> (gen_table.cpp) : g++
-        (Compiler) -[#DarkOrange]-> (gen_latex.cpp) : g++
-        (Compiler) -[#DarkOrange]-> (ast.cpp) : g++
-        (Compiler) -[#DarkOrange]-> (parser.cpp) : g++
-        (Compiler) -[#DarkOrange]-> (lexer.cpp) : g++
-        (Compiler) -[#DarkOrange]-> (main.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (gen_bib.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (gen_list.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (gen_table.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (gen_latex.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (ast.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (parser.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (lexer.cpp) : g++
+        (Compiler) --[#DarkOrange]--> (main.cpp) : g++
     }
 
 @enduml

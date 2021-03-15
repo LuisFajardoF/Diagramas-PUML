@@ -1,0 +1,22 @@
+@startuml
+    file prod1 as "
+        !--
+            pagenumbering: Roman {
+                set: 4
+            }
+        --!
+    "
+    
+    file prod2 as "
+        !--
+            pagenumbering: Roman
+        --!
+    "
+
+    (param_level_1) --> (production 1)
+    (param_level_1) --> (production 2)
+    (production 1) --> prod1
+    (production 2) --> prod2
+    prod1 --> [**new** PageNumberingAsSet(Roman, 4)]
+    prod2 --> [**new** PageNumbering(Roman)]
+@enduml
