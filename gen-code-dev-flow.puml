@@ -1,19 +1,19 @@
 @startuml
     |#LightYellow|Análisis sintáctico|
-        while ( elements ) is (not end)
-            :**new:** element;
+        while ( element_list ) is (not end)
+            :**new:** elements(element);
         endwhile ( end )
             :**new node:** BlockElement(elements);
     |#WhiteSmoke|Generación de código|
         :genLatex(BlockElement);
         partition genLatex {
-            :**get:** Code::documentClass();
-            :**get:** packsCode();
-            :**get:** globalParamsCode();
+            :**code:** Code::documentClass()]
+            :**code:** packsCode()]
+            :**code:** globalParamsCode()]
             while (elements) is (not end)
-                :**get:** element->genLatex();
+                :**code:** element->genLatex()]
             endwhile ( end )
-                :**get:** endDocument();
-                :**return:** code;
+                :**code:** endDocument()]
+                :**return:** code]
         }
 @enduml
