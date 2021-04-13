@@ -1,0 +1,36 @@
+@startgantt
+scale 2
+2021-03-01 to 2021-03-28 is open
+title Actividades: Mes 5
+
+Project starts the 2021-03-01
+-- Semana 17 --
+[ ] starts 2021-03-01
+[ ] is colored in DarkSlateGray
+[ ] ends 2021-03-07
+
+-- Semana 18 --
+[  ] starts 2021-03-08
+[  ] is colored in DarkSlateGray
+[  ] ends 2021-03-14
+
+-- Semana 19 --
+[   ] starts 2021-03-15
+[   ] is colored in DarkSlateGray
+2021-03-20 is colored in LightGray
+[   ] ends 2021-03-21
+
+-- Semana 20 --
+[    ] starts 2021-03-22
+[    ] is colored in DarkSlateGray
+2021-03-27 to 2021-03-28 are colored in LightGray
+[    ] ends 2021-03-28
+
+skinparam LegendBackgroundColor White 
+skinparam LegendBorderColor White 
+legend right
+|<back:LightGray>___</back>| Días no trabajados |
+endlegend
+
+hide footbox
+@endgantt
